@@ -66,6 +66,10 @@ body h1 {
     opacity: 0.6;
     border-radius: 15px;
 }
+.active {
+    background: none;
+    border: solid 3px white;
+}
 
 @media (max-width: 768px) {
     .content__wrapper {

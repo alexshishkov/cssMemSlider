@@ -23,6 +23,35 @@ let data = [
     }
 ]
 
+let buttons = document.querySelectorAll('.control__wrap')
+let button = document.querySelectorAll('control__button')
+let img = document.querySelector('.content__img')
+let text = document.querySelector('.content__text')
+let index = 0
+
+
+function getIndex (e) {
+    index = e.target.dataset.button
+    getData(index, data)
+    return index
+}
+button.forEach((e) => {
+    e.addEventListener('click', getIndex)
+})
+
+buttons.forEach((e) => {
+  e.addEventListener('click', getIndex)
+    }
+);
+
+function getData (index, data) {
+    img.src = data[index].img
+    text.textContent = data[index].text
+}
+
+getData(index, data)
+
+
 
 
 
