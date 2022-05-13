@@ -81,7 +81,7 @@ body h1 {
     }
     .content__text {
         width: 100%;
-        font-size: 20px;
+        font-size: 30px;
     }
     .control {
         display: flex;
@@ -93,20 +93,20 @@ body h1 {
 
 @media (max-width: 520px) {
     body h1 {
-        font-size: 20px;
+        font-size: 30px;
         margin: 5px;
     }
     .content__wrapper {
         width: 90%;
     }
     .content__img {
-        height: 25rem;
+        height: 20rem;
     }
     .content {
         font-size: 15px;
         margin-top: 5px;
     }
     .content__text {
-        font-size: 20px;
+        font-size: 30px;
     }
 }

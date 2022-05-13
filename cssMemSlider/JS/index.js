@@ -27,6 +27,7 @@ let buttons = document.querySelectorAll('.control__wrap')
 let button = document.querySelectorAll('control__button')
 let img = document.querySelector('.content__img')
 let text = document.querySelector('.content__text')
+const activeBtns = document.querySelectorAll('.control__button');
 let index = 0
 
 
@@ -42,6 +43,13 @@ button.forEach((e) => {
 
 buttons.forEach((e) => {
   e.addEventListener('click', getIndex)
+  e.addEventListener('click', function(event) {
+    for (let i = 0; i < activeBtns.length; i++) {
+        activeBtns[i].classList.remove('active')
+            }
+    let but = event.currentTarget.querySelector('.active__button');
+    but.classList.add('active');
+    });
     }
 );
 
@@ -53,38 +61,5 @@ function getData (index, data) {
 }
 
 getData(index, data)
-
-const activeBtns = document.querySelectorAll('.control__button');
-
-activeBtns.forEach(function(elem) {
-    elem.addEventListener('click', changeClassActive)
-});
-
-function changeClassActive(e) {
-    for (let i = 0; i < activeBtns.length; i++) {
-        activeBtns[i].classList.remove('active')
-    }
-    e.target.classList.add('active')
-}
-
-function changeButtons () {
-    buttons.forEach((e) => {
-        e.querySelectorAll('.active__button').forEach((e) => {
-            e.classList.remove('active')
-        })
-    })
-}
-
-
-buttons.forEach((e) => {
-    e.addEventListener('click', function(event) {
-        let but = event.target.querySelector('.active__button');
-        but.classList.add('active');
-        });
-}
-);
-
-
-
 
 
