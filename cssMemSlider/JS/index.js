@@ -54,6 +54,10 @@ buttons.forEach((e) => {
 );
 
 function getData (index, data) {
+    text.classList.remove('transition__text')
+    img.classList.add('transition')
+    setTimeout(() =>  text.classList.add('transition__text'), 70)
+   
     img.style.background = 'url('+data[index].img+') no-repeat center'
     img.style.backgroundSize = 'cover'
     img.style.width = '100%'

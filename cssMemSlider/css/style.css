@@ -16,6 +16,21 @@ body h1 {
     font-size: 50px;
     margin-top: 20px;
 }
+.transition {
+    transition: 0.7s;
+}
+.transition__text {
+    transition: 0.7s;
+    animation: showBlock 1s linear forwards;
+}
+@keyframes showBlock {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .content__wrapper {
     width: 730px;
     display: flex;
@@ -33,6 +48,7 @@ body h1 {
     margin-top: 20px;
 }
 .content__text {
+    opacity: 0;
     width: 70%;
     color: aliceblue;
 }
