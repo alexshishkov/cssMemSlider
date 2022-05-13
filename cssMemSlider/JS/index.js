@@ -35,6 +35,7 @@ function getIndex (e) {
     getData(index, data)
     return index
 }
+
 button.forEach((e) => {
     e.addEventListener('click', getIndex)
 })
@@ -45,13 +46,43 @@ buttons.forEach((e) => {
 );
 
 function getData (index, data) {
-    img.src = data[index].img
+    img.style.background = 'url('+data[index].img+') no-repeat center'
+    img.style.backgroundSize = 'cover'
+    img.style.width = '100%'
     text.textContent = data[index].text
 }
 
 getData(index, data)
 
+const activeBtns = document.querySelectorAll('.control__button');
 
+activeBtns.forEach(function(elem) {
+    elem.addEventListener('click', changeClassActive)
+});
+
+function changeClassActive(e) {
+    for (let i = 0; i < activeBtns.length; i++) {
+        activeBtns[i].classList.remove('active')
+    }
+    e.target.classList.add('active')
+}
+
+function changeButtons () {
+    buttons.forEach((e) => {
+        e.querySelectorAll('.active__button').forEach((e) => {
+            e.classList.remove('active')
+        })
+    })
+}
+
+
+buttons.forEach((e) => {
+    e.addEventListener('click', function(event) {
+        let but = event.target.querySelector('.active__button');
+        but.classList.add('active');
+        });
+}
+);
 
 
 

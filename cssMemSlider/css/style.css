@@ -23,18 +23,14 @@ body h1 {
     align-items: center;
     flex-direction: column;
 }
-.content__img{
-    width: 730px;
-    height: 490px;
-   /* background: url("../assets/джорш.jpg");
-    background-size: 100%; */
+.content__img {
+    height: 30rem;
 }
 .content {
-    height: 115px;
     display: flex;
     justify-content: space-between;   
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .content__text {
     width: 70%;
@@ -44,7 +40,7 @@ body h1 {
     display: flex;
     justify-content: center;
     color: aliceblue;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .control__wrap {
     width: 40px;
@@ -73,18 +69,19 @@ body h1 {
 
 @media (max-width: 768px) {
     .content__wrapper {
-        width: 500px;
+        width: 90%;
     }
-    .content__img{
-        width: 500px;
-        height: 320px;
+    .content__img {
+        width: 30rem;
+        height: 30rem;
     }
     .content {
         flex-direction: column-reverse;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .content__text {
         width: 100%;
+        font-size: 20px;
     }
     .control {
         display: flex;
@@ -100,14 +97,16 @@ body h1 {
         margin: 5px;
     }
     .content__wrapper {
-        width: 310px;
+        width: 90%;
     }
     .content__img {
-        width: 310px;
-        height: 220px;
+        height: 25rem;
     }
     .content {
         font-size: 15px;
         margin-top: 5px;
+    }
+    .content__text {
+        font-size: 20px;
     }
 }
