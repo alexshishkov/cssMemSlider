@@ -9,30 +9,44 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <input type="radio" name="slide" id="m1" checked="">
+    <input type="radio" name="slide" id="m2">
+    <input type="radio" name="slide" id="m3">
+    <input type="radio" name="slide" id="m4">
     <h1>Rock Slider</h1>
-    <div class="content__wrapper">
-      <div class="content__img"></div> 
+        <div class="images">
+            <div class="image" id="img1"></div> 
+            <div class="image" id="img2"></div> 
+            <div class="image" id="img3"></div> 
+            <div class="image" id="img4"></div> 
+        </div>
        <div class="content">
            <div class="content__text">
-               „Рок-н-ролл — это действительно народная музыка.
-                Вообще всё, что делается честно, изо всех сил, отчаянно и здорово, — всё народное.“    
-                Сид Вишес (Sex Pistols)
-            </div>
+               <div class="text" id="text1">
+                    „Рок-н-ролл — это действительно народная музыка.
+                    Вообще всё, что делается честно, изо всех сил, отчаянно
+                    и здорово, — всё народное.“ Егор Летов (Гр.Об.)
+               </div>
+               <div class="text" id="text2">
+                    „Возможно я умру прежде чем мне исполнится 25,
+                    но когда это случится, я проживу свою жизнь так, как я хотел.“
+                    Сид Вишес (Sex Pistols)
+               </div>
+               <div class="text" id="text3">
+                    „Я горжусь тем, что на моей душе стоит клеймо рок-н-ролла!“ 
+                    Пол Маккартни (Beatles)
+               </div>
+               <div class="text" id="text4">
+                    „Есть ль у дьявола свое радио? Да! Это сплетни.“
+                    Джордж Харрисон, (Beatles)
+               </div>
+             </div>
            <div class="control">
-               <div class="control__wrap" data-button="0">
-                   <div class="control__button active__button active" data-button="0"></div>
-               </div>
-               <div class="control__wrap" data-button="1">
-                <div class="control__button active__button" data-button="1"></div>
-               </div>
-               <div class="control__wrap" data-button="2">
-                <div class="control__button active__button" data-button="2"></div>
-               </div>
-               <div class="control__wrap" data-button="3">
-                <div class="control__button active__button" data-button="3"></div>
-               </div>
+               <label for="m1" id="b1"></label>
+               <label for="m2" id="b2"></label>
+               <label for="m3" id="b3"></label>
+               <label for="m4" id="b4"></label>
            </div>
        </div>
-    </div>
 </body>
 </html>
