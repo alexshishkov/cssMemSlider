@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 body {
     width: 100%;
     height: 100vh;
@@ -13,10 +14,11 @@ body {
     background: url("../assets/bg.jpg");
     background-size: 100%;
 }
+
 body h1 {
     color: aliceblue;
-    font-size: 50px;
-    margin-top: 20px;
+    font-size: 2rem;
+    margin-top: 1rem;
 }
 .images {
     display: flex;
@@ -24,26 +26,32 @@ body h1 {
     width: 100%;
     border-radius: 0.5rem;
 }
+
 .images.active {
     width: 100%;
 }
+
 .image {
     width: 0;
     border-radius: 0.5rem;
     transition: 1s;
 }
+
 #img1 {
     background: url(../assets/Егор.jpg) no-repeat center;
     background-size: contain;
 }
+
 #img2 {
     background: url(../assets/Sid.jpg) no-repeat center;
     background-size: contain;
 }
+
 #img3 {
     background: url(../assets/Pol.jpg) no-repeat center;
     background-size: contain;
 }
+
 #img4 {
     background: url(../assets/джорш.jpg) no-repeat center;
     background-size: contain;
@@ -55,14 +63,16 @@ body h1 {
     height: 10vh;
     width: 95%;
 }
+
 .content .content__text {
     display: flex;
     width: 70%;
     height: 2.3em;
 }
+
 .content .content__text .text {
-    height: 100px;
-    font-size: 20px;
+    height: 12rem;
+    font-size: 1.3rem;
     color: aliceblue;
     opacity: 0;
     overflow: hidden;
@@ -70,6 +80,7 @@ body h1 {
     padding-top: 1em;
     transition: width 1s, opacity 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
+
 #m1:checked ~ .content .content__text #text1,
 #m2:checked ~ .content .content__text #text2,
 #m3:checked ~ .content .content__text #text3,
@@ -78,36 +89,48 @@ body h1 {
     width: 100%;
     font-stretch: ultra-expanded;
 }
+
 .content .control {
     display: flex;
     height: 3em;
 }
+
  .control {
     height: 3em;
     display: flex;
     justify-content: center;
     color: aliceblue;
-    margin-top: 10px;
 }
+
 input {
     display: none;
 }
+
 #m1:checked ~ .images #img1,
 #m2:checked ~ .images #img2,
 #m3:checked ~ .images #img3,
 #m4:checked ~ .images #img4 {
     width: 100%;
 }
+
 label {
     width: 1em;
     height: 1em;
     border: 1em solid #68696b;
     border-radius: 50%;
     background-color: aliceblue;
+    opacity: 0.7;
     cursor: pointer;
 }
+
 label:hover {
     background-color: aliceblue;
+    opacity: 1;
+}
+
+label:active {
+    background-color: black;
+    opacity: 1;
 }
 
 #m1:checked ~ .content .control #b1,
@@ -122,28 +145,29 @@ label:hover {
 
     .content {
         height: 60vh;
-    }
-
-    .content {
         flex-direction: column-reverse;
         justify-content: space-around;
         height: 20vh;
     }
 
-    .control {
-        justify-content: center;
-    }
     .content .content__text {
         width: 100%;
     }
+
+    .control {
+        justify-content: center;
+    }
+   
 }
 
 @media (max-width: 640px), (max-height: 430px) {
+
     body {
         height: 75vh;
         font-size: large;
     }
+
     .content .content__text .text {
-        height: 170px;
+        height: 13rem;
     }
 }
